@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>MY S***</title>
+  </head>
+  <style>
+    .overlayBox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: chocolate;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    .mmerechiHolder {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      background-color: maroon;
+      opacity: 0.9;
+      z-index: 2;
+    }
+    body {
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      background-image: url('giphy.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px 0;
+        position: relative;
+        z-index: 2;
+    }
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        padding: 5px 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    .active a {
+        color: chocolate;
+    }
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+      color: white;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      position: relative;
+      z-index: 2;
+    }
+    .projectItem {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .projectItem img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      display: block;
+    }
+    .projectItem p {
+      margin-top: 10px;
+      font-size: 0.8em;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2em;
+    }
+    .projectItem.bottom {
+      grid-column: 2 / span 1;
+    }
+  </style>
+  <body>
+    <div class="mmerechiHolder"></div>
+    <div class="overlayBox"></div>
+      <header>
+          <nav>
+            <ul class="navbar">
+              <li><a href="index.html" target="_parent">HOME</a></li>
+              <li><a href="profileandSkills.html" target="_parent">MYSELF</a></li>
+              <li class="active"><a href="proJECTS.html" target="_parent">MY S***</a></li>
+              <li><a href="reachME.html" target="_parent">REACH ME</a></li>
+            </ul>
+          </nav>
+      </header>
+      <h1 style="text-align: center; color: white; font-family: 'Courier New', Courier, monospace;">My...Stuff</h1>
+      <div class="projectsGrid">
+        <div class="projectItem">
+          <img src="icegif-1283.gif" alt="An omni-interfacing AI" title="An AI that trains itself on cosmological data">
+          <p>An omni-interfacing AI that trains itself on cosmological data</p>
+        </div>
+        <div class="projectItem">
+          <img src="original-1a2c14981aed3033dc0036d3871a03f0.gif" alt="Clean energy" title="A graphic image advocating clean energy">
+          <p>A graphic image advocating clean energy</p>
+        </div>
+        <div class="projectItem">
+          <img src="ce963767817393.5b472244e81a7.gif" alt="UI/UX layout" title="A UI/UX layout for a website">
+          <p>A UI/UX layout for a website</p>
+        </div>
+        <div class="projectItem">
+          <img src="yeheyy-happy.gif" alt="Hoodbank ATM OS" title="Hoodbank ATM Operating System with Python">
+          <p>Hoodbank ATM Operating System made with Python</p>
+        </div>
+        <div class="projectItem">
+          <img src="uploads_1600271627017-Top+Halloween+addons+-+image+02+-+EZLattice.gif" alt="Jurassic Park 3D" title="Jurassic Park 3D rendition">
+          <p>A Jurassic Park 3D rendition I made while working with the movie’s special effects department</p>
+        </div>
+        <div class="projectItem">
+          <img src="original-3d90fb09f5268a362e6ee1c01e0bbb48.gif" alt="Emotes" title="Emotes">
+          <p>Emoticon expressions I made while working with the WHATC.</p>
+        </div>
+        <div class="projectItem bottom">
+          <img src="Zo5lByM.gif" alt="Linux visualizer" title="Linux-made visualizer">
+          <p>A visualizer I made using Fedora, a Linux distro.</p>
+        </div>
+      </div>
+
+  </body>
 </html>

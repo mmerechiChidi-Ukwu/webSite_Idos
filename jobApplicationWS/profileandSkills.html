@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MYSELF</title>
     <style>
+      body {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        background-image: url('giphy.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+      }
+        html {
+            scroll-behavior: smooth;
+        }
       .overlayBox {
         position: fixed;
         top: 0;
@@ -14,7 +28,7 @@
         width: 100%;
         height: 100%;
         background-color: chocolate;
-        opacity: 0.5;
+        opacity: 0.69;
       }
       .mmerechiHolder {
         position: fixed;
@@ -104,13 +118,10 @@
         text-align: justify;
         color: white;
         padding: 30px;
-        overflow: hidden;
         font-family: 'Courier New', Courier, monospace;
         z-index: 4;
         transition: all 0.5s ease;
-        overflow: auto;
-        scrollbar-width: none;
-
+        overflow-y: auto;
       }
       .contentSection {
         position: absolute;
@@ -220,7 +231,7 @@
     <div class="infoBox">
       <div class="get-InfRONTof_me">
         <div id="Section_1" class="contentSection visible">
-          <p class="_little-about"> and I do...stuff.<br>I am a freelancer with 8 years of experience across various fields, including computer programming, media and graphics design and editing, and crafts, for some reason.</p>
+          <p class="_little-about"> and I do...stuff.<br>I am a computer-based freelancer with 8 years of experience across various fields, including computer programming, media and graphics design and editing, and crafts, for some reason.</p>
         </div>
         <div id="Section_2" class="contentSection hidden">
           <ul class="aboutMe">
@@ -246,7 +257,7 @@
           </ul>
         </div>
       </div>
-  <div class="arrow" onclick="nextSection()">&#8594;</div>
-</div>
+    <div class="arrow" onclick="nextSection()">&#8594;</div>
+  </div>
   </body>
 </html>
