@@ -17,14 +17,21 @@
       z-index: 1;
     }
     .mmerechiHolder {
+      display: flex;
       position: fixed;
+      align-items: center;
+      justify-content: center;
       top: 0;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 800px;
+      height: 100vh;
+      overflow: hidden;
       background-color: maroon;
       opacity: 0.9;
+      padding: 0;
+      box-sizing: border-box;
       z-index: 2;
     }
     body {
@@ -61,39 +68,59 @@
     .active a {
         color: chocolate;
     }
-    .projectsGrid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 40px;
-      color: white;
+    .styroFoAm{
       text-align: center;
       font-family: 'Courier New', Courier, monospace;
+      font-size: 85px;
+      color: white;
+      z-index: 2;
+      position: relative;
+      margin: 1;
+      top: -30px;
+      line-height: 1
+    }
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minimax(160px, 1fr));
+      gap: 10px;
+      padding: 10px;
+      margin: 0;
+      width: 100%;
+      list-style: none;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      box-sizing: border-box;
       position: relative;
       z-index: 2;
+      justify-items: center;
+      align-items: center;
     }
     .projectItem {
-      width: 200px;
-      height: 200px;
+      width: 240px;
+      height: 160px;
       overflow: hidden;
-      margin: auto;
+      position: relative;
+      background-color: black;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
+      align-items: center;
     }
     .projectItem img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 0;
       display: block;
     }
     .projectItem p {
-      margin-top: 10px;
-      font-size: 0.8em;
-      color: #fff;
+      position: absolute;
+      bottom: -30px;
+      width: 100%;
       text-align: center;
-      line-height: 1.2em;
+      color: white;
+      font-size: 0.75em;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 4px 6px;
     }
     .projectItem.bottom {
       grid-column: 2 / span 1;
@@ -112,7 +139,7 @@
             </ul>
           </nav>
       </header>
-      <h1 style="text-align: center; color: white; font-family: 'Courier New', Courier, monospace;">My...Stuff</h1>
+      <h1 class="styroFoAm">My...<br>Stuff</h1>
       <div class="projectsGrid">
         <div class="projectItem">
           <img src="icegif-1283.gif" alt="An omni-interfacing AI" title="An AI that trains itself on cosmological data">
@@ -143,6 +170,5 @@
           <p>A visualizer I made using Fedora, a Linux distro.</p>
         </div>
       </div>
-
   </body>
 </html>
