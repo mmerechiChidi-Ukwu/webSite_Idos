@@ -3,150 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I DO S***</title>
-    <style>
-        .overlayBox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: chocolate;
-            opacity: 0.69;
-            z-index: 1;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .mmerechiHolder {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
-            background-color: maroon;
-            opacity: 0.9;
-            z-index: 2;
-        }
-        body {
-            position: fixed;
-            margin: 0;
-            padding: 0;
-            background-image: url('giphy.gif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            position: relative;
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            font-family: 'Courier New', Courier, monospace;
-            padding: 20px 0;
-            position: relative;
-            z-index: 2;
-        }
-        .navbar li {
-            margin: 0 15px;
-        }
-        .navbar a {
-            padding: 5px 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .active a {
-            color: chocolate;
-        }
-        .whatI_DO {
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 110px;
-            color: white;
-            z-index: 2;
-            position: relative;
-            margin: 1;
-            top: -35px;
-            line-height: 1;
-        }
-        h2, h4 {
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            z-index: 2;
-            position: relative;
-        }
-        .badge_1d h2 {
-            position: relative;
-            background-color: black;
-            display: inline-block;
-            padding: 10px 10px;
-            left: 55%;
-            top: 85px;
-            z-index: 2;
-            position: relative;
-            color: white;
-            font-size: 20px;
-            margin: 0;
-        }
-        .badge_1d h4 {
-            position: relative;
-            background-color: black;
-            display: inline-block;
-            padding: 5px 5px;
-            left: 35.999999999999999999999999999999%;
-            top: 125px;
-            z-index: 2;
-            position: relative;
-            color: white;
-            font-size: 14px;
-            margin: 0;
-        }
-        .whatI_DO b {
-            letter-spacing: 10px;
-        }
-        .whatI_DO + .whatI_DO {
-            margin-top: -70px;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 300px;
-            z-index: 2;
-            position: relative;
-        }
-        .Me {
-            position: absolute;
-            z-index: 2;
-            top: 18%;
-            left: 36%;
-        }
-    </style>
+    <title>Home</title>
 </head>
 <body>
-    <div class="overlayBox"></div>
-    <div class="mmerechiHolder"></div>
     <header>
         <nav>
-            <ul class="navbar">
-                <li class="active"><a href="index.html" target="_parent">HOME</a></li>
-                <li><a href="profileandSkills.html" target="_parent">MYSELF</a></li>
-                <li><a href="proJECTS.html" target="_parent">MY S***</a></li>
-                <li><a href="reachME.html" target="_parent">REACH ME</a></li>
-            </ul>
+          <ul class="navbar">
+            <li><a href="index.html" target="_self">HOME</a></li>
+            <li><a href="profileandSkills.html" target="_self">WHO AM I?</a></li>
+            <li><a href="proJECTS.html" target="_self">WHAT I'VE DONE</a></li>
+            <li><a href="reachME.html" target="_self">REACH ME</a></li>
+          </ul>
         </nav>
     </header>
-    <div>
-            <h1 class="whatI_DO">I DO</h1>
-            <h1 class="whatI_DO"><b>SHIT</b></h1>
-            <img class="Me" src="WhatsApp_Image_2025-05-12_at_18.13.22_d9c07dba-removebg-preview.PNG" style="width: 500px; height: auto;" alt="Tuoyo from I.T.!" title="TUOYO FROM I.T.!">
-            <div class="badge_1d">
-                <h2>MMERECHI D. CHIDI-UKWU</h2>
-                <h4>COMPUTER FREELANCER</h4>
-            </div>
-    </div>
+    <hr>
+    <h3><pre>Hi! I'm</pre></h3>
+    <h1>
+        <pre>
+            MMERECHI D.
+            CHIDI-UKWU
+        </pre>
+    </h1>
+    <h2>
+        <pre>, and I'm a
+            Computer <del>Engineer</del> <ins>Freelancer</ins>
+        </pre>
+    </h2>
+    <img src="MMERECHI_DAVID_CHIDI-UKWU-removebg-preview.png" alt="Mmerechi Chidi-Ukwu, a computer scientist" title="Mmerechi from I.T.!">
 </body>
 </html>

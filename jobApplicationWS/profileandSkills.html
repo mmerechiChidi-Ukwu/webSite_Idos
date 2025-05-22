@@ -3,261 +3,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MYSELF</title>
-    <style>
-      body {
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        background-image: url('giphy.gif');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh;
-        position: relative;
-      }
-        html {
-            scroll-behavior: smooth;
-        }
-      .overlayBox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: chocolate;
-        opacity: 0.69;
-      }
-      .mmerechiHolder {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 600px;
-        background-color: maroon;
-        opacity: 0.9;
-      }
-      .navbar {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        font-family: 'Courier New', Courier, monospace;
-        padding: 20px 0;
-        position: relative;
-        z-index: 2;
-      }
-      .navbar li {
-        margin: 0 15px;
-      }
-      .navbar a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        padding: 10px 20px;
-        display: inline-block;
-        transition: color 0.3s ease;
-      }
-      .active a {
-          color: chocolate;
-      }
-      .aboutMe {
-        z-index: 2;
-      }
-      .aboutMe li {
-        margin-bottom: 15px;
-      }
-      .aboutMe li h2{
-        margin: 0 0 5px;
-      }
-      .Me {
-        position: absolute;
-        top: 10%;
-        left: 4%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 2;
-      }
-      .get-InfRONTof_me {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        overflow: hidden;
-      }
-      .badge-container {
-        position: absolute;
-        top: 362px;
-        left: 450px;
-        width: 100%;
-        z-index: 5;
-      }
-      .badge_1d {
-        position: absolute;
-        background-color: black;
-        display: flex;
-        padding: 10px;
-        left: 0%;
-        white-space: nowrap;
-        z-index: 5;
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        font-size: 30px;
-        margin: 0;
-      }
-      .infoBox {
-        position: absolute;
-        top: 420px;
-        left: 450px;
-        width: 400px;
-        height: 200px;
-        background-color: black;
-        display: inline-block;
-        text-align: justify;
-        color: white;
-        padding: 30px;
-        font-family: 'Courier New', Courier, monospace;
-        z-index: 4;
-        transition: all 0.5s ease;
-        overflow-y: auto;
-      }
-      .contentSection {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-      .hidden {
-        opacity: 0;
-        transform: translateX(100%);
-        pointer-events: none;
-      }
-      .visible {
-        opacity: 1;
-        transform: translateX(0%);
-        pointer-events: all;
-      }
-      .arrow {
-        position:absolute;
-        bottom: 20px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        z-index: 5;
-        transition: transform 0.3s ease;
-      }
-      .arrow:hover {
-        transform: scale(1.2);
-      }
-      .headerText {
-        font-size: 28px;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-      .little-about {
-        font-family: 'Courier New', Courier, monospace;
-        background-color: black;
-        justify-content: flex-start;
-        display: inline-block;
-        padding: 15px 15px;
-        position: relative;
-        font-size: 20px;
-        color: white;
-        z-index: 2;
-      }
-      .aboutMe h2{
-        margin: 10px 0 5px;
-        font-size: 20px;
-      }
-    </style>
-    <script>
-      let currentSection = 1;
-      function nextSection() {
-        const head1 = document.getElementById('headerBadge_1')
-        const sec1 = document.getElementById('Section_1');
-        const head2 = document.getElementById('headerBadge_2')
-        const sec2 = document.getElementById('Section_2');
-        const arrow = document.querySelector('.arrow');
-        if (currentSection === 1) {
-          head1.classList.remove('visible')
-          head1.classList.add('hidden')
-          sec1.classList.remove('visible');
-          sec1.classList.add('hidden');
-          head2.classList.remove('hidden')
-          head2.classList.add('visible')
-          sec2.classList.remove('hidden');
-          sec2.classList.add('visible');
-          arrow.innerHTML = '&#8592;';
-          currentSection = 2;
-        } else {
-          head2.classList.remove('visible')
-          head2.classList.add('hidden')
-          sec2.classList.remove('visible');
-          sec2.classList.add('hidden');
-          head1.classList.remove('hidden')
-          head1.classList.add('visible')
-          sec1.classList.remove('hidden');
-          sec1.classList.add('visible');
-          arrow.innerHTML = '&#8594;';
-          currentSection = 1;
-        }
-      }
-    </script>
   </head>
   <body>
-    <div class="overlayBox"></div>
-    <div class="mmerechiHolder">
-      <header>
-        <nav>
-          <ul class="navbar">
-            <li><a href="index.html" target="_parent">HOME</a></li>
-            <li class="active"><a href="profileandSkills.html" target="_parent">MYSELF</a></li>
-            <li><a href="proJECTS.html" target="_parent">MY S***</a></li>
-            <li><a href="reachME.html" target="_parent">REACH ME</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-    <img class="Me" src="WhatsApp_Image_2025-05-12_at_18.13.22_d9c07dba-removebg-preview.PNG" style="width: 550px; height: auto;" alt="Tuoyo from I.T.!" title="TUOYO FROM I.T.!">
-    <div class="badge-container">
-      <div class="badge_1d visible" id="headerBadge_1">Hi! I'm Mmerechi,</div>
-      <div class="badge_1d hidden" id="headerBadge_2">About Me</div>
-    </div>
-    <div class="infoBox">
-      <div class="get-InfRONTof_me">
-        <div id="Section_1" class="contentSection visible">
-          <p class="_little-about"> and I do...stuff.<br>I am a computer-based freelancer with 8 years of experience across various fields, including computer programming, media and graphics design and editing, and crafts, for some reason.</p>
-        </div>
-        <div id="Section_2" class="contentSection hidden">
-          <ul class="aboutMe">
-            <li><h2>2007</h2>Born January 21st in Abuja</li>
-            <br>
-            <li><h2>2011</h2>Started reading Encyclopaedia Britannica</li>
-            <br>
-            <li><h2>2014</h2>Started learning BASH and Linux</li>
-            <br>
-            <li><h2>2015</h2>Finished Britannica (and Americanna)</li>
-            <br>
-            <li><h2>2016</h2>Took up Formal Sciences as a hobby</li>
-            <br>
-            <li><h2>2020 - Lockdown</h2>Learned Web Development and took the Harvard CS50 course</li>
-            <br>
-            <li><h2>2021</h2>Took up photography and draughtsmanship</li>
-            <br>
-            <li><h2>2023</h2>Learned AI and ML</li>
-            <br>
-            <li><h2>2024</h2>Learned graphics and media editing</li>
-            <br>
-            <li><h2>2025</h2>Am hoping to work for you.</li>
-          </ul>
-        </div>
-      </div>
-    <div class="arrow" onclick="nextSection()">&#8594;</div>
-  </div>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html" target="_parent">HOME</a></li>
+          <li class="active"><a href="profileandSkills.html" target="_parent">WHO AM I?</a></li>
+          <li><a href="proJECTS.html" target="_parent">WHAT I'VE DONE</a></li>
+          <li><a href="reachME.html" target="_parent">REACH ME</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr>
+    <img src="MMERECHI_DAVID_CHIDI-UKWU-removebg-preview.png" alt="Mmerechi Chidi-Ukwu, a computer engineer">
+    <h1>WHO AM I?</h1>
+    <p>My name is Mmerechi.<br>I am a self-trained computer engineer with 10 years of experience in various aspects. I hold a few certificates that I got online, too, if that helps anything, and am available and willing to work.</p>
+    <hr>
+    <h2>SKILLS</h2>
+    <ul>
+      <li>Web Development<br>5 years of experience in HTML, CSS, PHP, and JavaScript and proficiency in React.JS.</li>
+      <li>Application Development<br>4 years of experience in app development, proficient in .NET, Java, Dart, C# and Swift, and frameworks like Flutter.</li>
+      <li>Shell Scripting<br>10 years of experience, proficiency in Linux and Windows BASH terminals</li>
+      <li>Python Programming<br>6 years of experience in Python programming.</li>
+      <li>Data Science<br>4 years of experience in Data Science, proficiency in SQL, Rust, and R as well as PostgreSQL, MongoDB and MySQL</li>
+      <li>Embedded Systems<br>9 years of experience, proficiency in C, C++, Arduino, Raspberry Pi, and ARM</li>
+      <li>Game Development<br>8 years of experience, proficiecy in Unreal Engine, Unity Hub and C#.</li>
+      <li>Cybersecurity<br>2 years of experience, excellent OSINT skills, use Kali Linux and GNS-3.</li>
+      <li>Cloud Computing<br>3 years of experience with AWS, Azure, and Google Cloud Platform, including containerization with Docker and Kubernetes.</li>
+      <li>Artificial Intelligence and Machine Learning<br>5 years of experience in ML algorithms and prompt engineering, proficiency in TensorFlow, PyTorch, and scikit-learn for predictive modeling.</li>
+      <li>Version Control<br>7 years of experience with Git, GitHub, GitLab, and collaborative development workflows including CI/CD pipelines.</li>
+      <li>Graphics Design and Media editing<br>over 9 years of experience with media software, including the Adobe Suite, Blender, Arnold software, Da Vinci Resolve, Figma, and much more.</li>
+      <li>Network Administration and Engineering<br>4 years of experience in network design, TCP/IP protocols, routing, switching, network administration, and network security implementation.</li>
+    </ul>
+    <h2>CERTIFICATIONS</h2>
+    <ul>
+      <li>Aptech Arena Multimedia Specialist - 2023</li>
+      <li>AWS Certified Solutions Architect Professional</li>
+      <li>CompTIA Security+ & Linux+</li>
+      <li>Cisco Certified Network Professional (CCNP)</li>
+      <li>Adobe Certified Expert (ACE) - Multiple Creative Suite Applications</li>
+      <li>Google Professional Machine Learning Engineer, Cloud Professional Data Engineer</li>
+      <li>Oracle Certified Professional: Java SE Developer</li>
+      <li>Nvidia DLI Certificates in Deep Learning, Accelerated Computing, & Converstional AI.</li>
+      <li>Microsoft Certified: Azure Developer Associate</li>
+      <li>Unity Certified Professional Game Developer</li>
+      <li>TensorFlow Developer Certificate</li>
+      <li>MongoDB Certified Developer</li>
+    </ul>
+    <h2>WORK EXPERIENCE</h2>
+    <ul>
+      <li>Junior Cloud Solutions Architect, Oracle</li>
+      <li>Full-Stack Developer and AI Engineer, Alphabet</li>
+      <li>Network Security Engineer, Cisco</li>
+      <li>Game Developer, Epic Games</li>
+      <li>Embedded Systems Engineer and Senior AI/ML Engineer, Nvidia</li>
+      <li>Multimedia Design Specialist, Pixar Studios</li>
+      <li>Operating Systems Developer, Palantir</li>
+      <li>VFX Engineer, Perfect Storm Studios</li>
+    </ul>
+    <h2>HOBBIES</h2>
+    <ul>
+      <li>Bicycle repair</li>
+      <li>Photography</li>
+      <li>Drawing</li>
+      <li>Writing</li>
+      <li>Draughtsmanship</li>
+      <li>Reading</li>
+      <li>Systems structuring</li>
+      <li>Basketball</li>
+      <li>Videography</li>
+      <li>Archery</li>
+      <li>Game development</li>
+      <li>Chess</li>
+      <li>Playing the Bass guitar</li>
+      <li>Jazz</li>
+    </ul>
   </body>
 </html>
